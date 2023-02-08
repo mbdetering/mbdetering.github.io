@@ -4,7 +4,7 @@
 
 ### Personal Projects 
 
-[Cyclistic Case Study](https://github.com/mbdetering/cyclistic_case_study/blob/main/README.md)
+[Cyclistic Case Study](https://github.com/mbdetering/cyclistic_case_study/README.md)
 <img src="images/thumbail.png?raw=true"/>
 
 ---
