@@ -5,7 +5,7 @@
 ### Personal Projects 
 
 [Cyclistic Case Study](/sample_page)
-<img src="images/thumbnail.jpg?raw=true"/>
+<img src="images/thumbail.jpg?raw=true"/>
 
 ---
 [Weather Tracking Application](/pdf/sample_presentation.pdf)
