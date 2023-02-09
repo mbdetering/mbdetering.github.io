@@ -140,4 +140,6 @@ After implementing these features the gui was completed displaying both current 
 
 <img src="images/screenshots/GUI.png?raw=true"/>
 
+## Part 3. Task Scheduling and Database Implementation
+
 
