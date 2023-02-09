@@ -51,6 +51,8 @@ Weekly Distributions = SUMMARIZECOLUMNS('Cyclistic-trip-data-year'[day_of_week] 
 
 ### 5. Visualizations and Analysis
 
+[pdf of visualizations](/pdf/Cyclistic Report.pdf)
+
 After creating these tables, I was ready to visualize the data and perform my analysis. The first thing I wanted to visualize was the overall distribution of rider types throughout the year. I chose to look at this because it gives insight into the overall proportion of members vs casual riders, as well as how the amount changes throughout the year. I created 4 visualizations using the rider counts data. These included a pie chart showing the overall proportion of each type, a scatter plot showing the amount of each type daily throughout the year, a bar chart showing the monthly rider counts, and a stacked bar chart showing the weekly averages.
 
 <img src="images/Cyclistic Images/Cyclistic Report1024_1.jpg?raw=true"/>
