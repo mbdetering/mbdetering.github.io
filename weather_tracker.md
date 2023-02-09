@@ -136,6 +136,8 @@ for i in range(len(paths)):
     x += 100
 ```
 
-After implementing these features the gui was completed.
+After implementing these features the gui was completed displaying both current and forecast data for a specified location.
+
+
 
 
