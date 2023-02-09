@@ -84,3 +84,58 @@ def mode_description(df):
 ```
 
 ### Part 2. Creating the weather app GUI
+
+**Python Packages Used:** tkinter, PIL: ImageTk, Image
+
+Creating the GUI was fairly straightfoward. First I needed to implement a window for the user to enter their api key, and the city which they wanted to request data from. This required two methods to be created. One to check the validity of the user inputs, and one to display an error message:
+
+```Python
+    # creates temporary tkinter window indicating that an error has occured in requesting the openweathermap api
+    def error():
+        popup = tk.Toplevel()
+        popup.title("ERROR!")
+
+        label = tk.Label(popup, text="invalid api key or city, please try again")
+        label.pack(pady=10)
+
+        close_button = tk.Button(popup, text="Close", command=popup.destroy)
+        close_button.pack(pady=10)
+```
+
+```Python
+    # validates that the inputed city and api key are valid with the openweathermap api. If the two are not valid,
+    # displays an error message, if the two are valid, closes the window and returns the inputs
+    # allowing for the main app to run.
+    def validate_key():
+        nonlocal api_key
+        nonlocal city
+        api_key = key_entry.get()
+        city = city_entry.get()
+        if 'main' not in we.extract_current_weather_data(api_key, city):
+            error()
+        else:
+            key_window.destroy()
+```
+
+These methods, along with the tkinter widgets for the main entry window would create two new windows:
+
+
+
+Creating the main GUI was straight forward. I first used the methods created earlier to extract and transform the correct data, then displayued the data using tkinter's built in widgets. The only complicated process was to display the icons for the 5-day foreacast. In order to do this, I created a list of filepaths for each day, then created new image objects, selecting the corrresponding image.
+
+```Python
+paths = []
+for desc in forecast_averages['weather']:
+    line = f'pics/{desc}.png'
+    paths.append(line)
+imgs = []
+x = 100
+for i in range(len(paths)):
+    imgs.append(ImageTk.PhotoImage(Image.open(paths[i])))
+    tk.Label(root, image=imgs[-1], width=50, height=50).place(x=x, y=440, anchor="center")
+    x += 100
+```
+
+After implementing these features the gui was completed.
+
+
