@@ -119,7 +119,7 @@ Creating the GUI was fairly straightfoward. First I needed to implement a window
 
 These methods, along with the tkinter widgets for the main entry window would create two new windows:
 
-
+<img src="images/screenshots/check.png?raw=true"/><img src="images/screenshots/error.png?raw=true"/>
 
 Creating the main GUI was straight forward. I first used the methods created earlier to extract and transform the correct data, then displayued the data using tkinter's built in widgets. The only complicated process was to display the icons for the 5-day foreacast. In order to do this, I created a list of filepaths for each day, then created new image objects, selecting the corrresponding image.
 
@@ -138,6 +138,6 @@ for i in range(len(paths)):
 
 After implementing these features the gui was completed displaying both current and forecast data for a specified location.
 
-
+<img src="images/screenshots/GUI.png?raw=true"/>
 
 
