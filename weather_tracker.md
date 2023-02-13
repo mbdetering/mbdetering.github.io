@@ -140,6 +140,10 @@ After implementing these features the gui was completed displaying both current 
 
 <img src="images/screenshots/GUI.png?raw=true"/>
 
-## Part 3. Task Scheduling and Database Implementation
+## Part 3. Tracking Weather Data
 
+**Technologies Used:** MySQL, Python, Power BI, Windows Task Scheduler
 
+The final feature to add was a database along with pyuthon scripts that automatically record and summarize weather data daily, storing in a MySQL database which could then be used for tracking long term patterns in weather data. The first step was to set up the database. This would be an OLAP database that would store both hourly recordings, along with daily summaries of weather data. In order to record this data, I created two tables: a "daily" table, which would keep a record of hourly measurements throughout each day, and a "weather" table, which would act as the main storage table for long term weather data. Each of these tables contained columns for temperature statistics, humidity, and surface pressure. Once these tables were created, I wrote two new python scripts to populate them. The first, called "hourly-update" was scheduled to run on the hour from 9 am to 9 pm, every day. This script ran the scheduling commands used for the acutal app every hour, storing the data collected in the daily table. The second script, called "end_day_update", pulls and summarizes the data from the daily table, before storing this summary in the weather table and clearing the daily table to be used the next day. This task was then set to run every day at 9 p.m. In order to visualize this data, I simply used power bi to connect to the weather database, which could then be used to visualize long term trends in temperature and pressure.
+
+<img src="images/screenshots/Summaries.png?raw=true"/>
