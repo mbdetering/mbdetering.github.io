@@ -9,7 +9,7 @@
 
 ---
 [Weather Tracking Application](/weather_tracker.md)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/screenshots/thumbnail.png?raw=true"/>
 
 ---
 
